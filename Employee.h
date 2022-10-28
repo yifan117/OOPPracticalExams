@@ -10,6 +10,9 @@ class Employee {
         int payRate; // hourly payRate
         float energyLevel;   // Initially 100%
 
+        int get_payRate();
+        float get_energyLevel();
+
         void takeABreak(int mins);
 
         void work(int mins);
