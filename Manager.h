@@ -3,6 +3,7 @@
 #include "Employee.h"
 
 class Manager : public Employee {
+    public:
     Manager();            
     Manager(int payRate);                // Create a Manager with a payRate
     
@@ -15,6 +16,10 @@ class Manager : public Employee {
     void set_daysWorked(int daysWorked);
     void set_hoursWorked(float hoursWorked);
 
+    void set_payRate(int payRate);
+    float get_energyLevel();
+    void set_energyLevel(float energyLevel);
+    int get_payRate();
     void work(int mins);
 
     float pay();

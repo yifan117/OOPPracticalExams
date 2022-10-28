@@ -13,8 +13,51 @@ void Manager::work(int mins) {
     if (this->energyLevel < 0) {
         this->energyLevel = 0;
     }
+
+    if (mins >= 480) {
+        this->energyLevel = 100;
+        this->hoursWorked = 0;
+        this->daysWorked++;
+    } 
 }
 
 float Manager::pay() {
-    return this->payRate * (this->energyLevel / 100);
+    if 
+    return this->payRate * total;
 }
+
+void Manager::set_daysWorked(int daysWorked) {
+    this->daysWorked = daysWorked;
+}
+
+int Manager::get_daysWorked() {
+    return this->daysWorked;
+}
+
+void Manager::set_hoursWorked(float hoursWorked) {
+    this->hoursWorked = hoursWorked;
+}
+
+float Manager::get_hoursWorked() {
+    return this->hoursWorked;
+}
+
+void Manager::set_payRate(int payRate) {
+    this->payRate = payRate;
+}
+
+int Manager::get_payRate() {
+    return this->payRate;
+}
+
+float Manager::get_energyLevel() {
+    return this->energyLevel;
+}
+
+void Manager::set_energyLevel(float energyLevel) {
+    this->energyLevel = energyLevel;
+}
+
+
+
+

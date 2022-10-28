@@ -4,13 +4,6 @@
 
 using namespace std;
 
-Casual::Casual() : Employee(0) {
-    this->dayCount = 0;
-    for (int i = 0; i < 7; i++) {
-        this->hoursWorked[i] = 0;
-    }
-}
-
 Casual::Casual(int payRate) : Employee(payRate) {
     this->dayCount = 0;
     for (int i = 0; i < 7; i++) {
@@ -41,6 +34,7 @@ void Casual::work(int mins) {
     this->energyLevel -= mins * 0.5;
     if (this->energyLevel < 0) {
         this->energyLevel = 0;
+        return;
     }
 }
 
@@ -56,9 +50,10 @@ float Casual::pay() {
     }
 
     this->dayCount = 0;
-        for (int i = 0; i < 7; i++) {
+
+    for (int i = 0; i < 7; i++) {
         this->hoursWorked[i] = 0;
     }
-    
+
     return (this->payRate * total);
 }
