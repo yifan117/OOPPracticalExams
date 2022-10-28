@@ -17,7 +17,7 @@ class Manager : public Employee {
 
     void set_payRate(int payRate);
     void set_energyLevel(float energyLevel);
-    void set_daysWorked();
+    void set_daysWorked(int days);
     void set_hoursWorked(float hoursWorked);
 
     void work(int mins);

@@ -1,12 +1,15 @@
 #include <iostream>
 #include "Employee.h"
+#include <vector>
+
 #pragma once
 
-class Shop {
+class Shop : public Employee {
     private:
     static Shop* createShop(int authority);
 
     public:
+    vector<employee*> employees;
     Shop();                          
     /* Creates a Shop containing pointers to 5 Employee objects as an array; 
     These Employee objects could be either Managers or Casuals, and in any order

@@ -15,8 +15,8 @@ void Manager::work(int mins) {
     }
 }
 
-void Manager::set_daysWorked() {
-    this->daysWorked = daysWorked;
+void Manager::set_daysWorked(int days) {
+    this->daysWorked = days;
 }
 
 void Manager::set_hoursWorked(float hoursWorked) {
@@ -28,7 +28,7 @@ void Manager::set_hoursWorked(float hoursWorked) {
 }
 
 float Manager::pay() {
-    return this->payRate * this->energyLevel;
+    return this->payRate * (this->daysWorked * 8);
 }
 
 int Manager::get_payRate() {
