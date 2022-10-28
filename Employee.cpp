@@ -33,3 +33,11 @@ int Employee::get_payRate() {
 float Employee::get_energyLevel() {
     return this->energyLevel;
 }
+
+void Employee::set_payRate(int payRate) {
+    this->payRate = payRate;
+}
+
+void Employee::set_energyLevel(float energyLevel) {
+    this->energyLevel = energyLevel;
+}
