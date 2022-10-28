@@ -8,13 +8,6 @@ Manager::Manager(int payRate) : Employee(payRate) {
     this->energyLevel = 100;
 }
 
-void Manager::takeABreak(int mins) {
-    this->energyLevel += mins * 2;
-    if (this->energyLevel > 100) {
-        this->energyLevel = 100;
-    }
-}
-
 void Manager::work(int mins) {
     this->energyLevel -= mins * 0.25;
     if (this->energyLevel < 0) {
