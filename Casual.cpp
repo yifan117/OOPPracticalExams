@@ -53,5 +53,5 @@ float Casual::pay() {
             total += this->hoursWorked[i] * 2;
         }
     }
-    return this->payRate * (this->energyLevel / 100) * total;
+    return this->payRate * total;
 }
