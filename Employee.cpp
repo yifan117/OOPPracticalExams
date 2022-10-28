@@ -26,7 +26,6 @@ void Employee::work(int mins) {
 }
 
 float Employee::pay() {
-    return this->payRate * (this->energyLevel / 100);
 }
 
 int Employee::get_payRate() {
