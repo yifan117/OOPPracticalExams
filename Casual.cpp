@@ -7,7 +7,11 @@ using namespace std;
 Casual::Casual() {
     for (int i = 0; i < 7; i++) {
         this->hoursWorked[i] = 0;
-    }    this->dayCount = 0;
+    }    
+    
+    this->dayCount = 0;
+
+    this->energyLevel = 100;
 }
 
 Casual::Casual(int payRate) {
@@ -15,6 +19,8 @@ Casual::Casual(int payRate) {
     for (int i = 0; i < 7; i++) {
         this->hoursWorked[i] = 0;
     }
+    
+    this->energyLevel = 100;
 }
 
 void Casual::set_payRate(int payRate) {
@@ -40,7 +46,7 @@ void Casual::set_dayCount(int dayCount) {
 }
 
 void Casual::work(int mins) {
-    this->energyLevel -= mins * 0.5;
+    this->energyLevel -= (mins * 0.5);
 
     if (this->energyLevel < 0) {
         this->energyLevel = 0;
