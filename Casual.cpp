@@ -29,7 +29,6 @@ void Casual::set_payRate(int payRate) {
 
 void Casual::endWorkDay() {
     this->dayCount++;
-    this->hoursWorked[this->dayCount] = 0;
     this->energyLevel = 100;
 }
 
@@ -57,13 +56,14 @@ void Casual::work(int mins) {
 }
 
 float Casual::pay() {
+    float total = 0;
 
     for (int i = 0; i < 7; i++) {
 
         if (i < 5) {
-        this->total += this->hoursWorked[i];
+        total += this->hoursWorked[i];
         } else if (i >= 5) {
-            this->total += (this->hoursWorked[i] * 2);
+            total += (this->hoursWorked[i] * 2);
         }
     }
 
@@ -73,6 +73,5 @@ float Casual::pay() {
         this->hoursWorked[i] = 0;
     }
 
-    this->payA = this->payRate * this->total;
-    return this->payA;
+    return (this->payRate * total);
 }
