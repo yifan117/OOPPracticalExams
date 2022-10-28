@@ -9,14 +9,14 @@ Employee::Employee(int payRate) {
 }
 
 void Employee::takeABreak(int mins) {
-    this->energyLevel += mins * 0.1;
+    this->energyLevel += mins * 0.2;
     if (this->energyLevel > 100) {
         this->energyLevel = 100;
     }
 }
 
 void Employee::work(int mins) {
-    this->energyLevel -= mins * 0.1;
+    this->energyLevel -= mins * 0.2;
     if (this->energyLevel < 0) {
         this->energyLevel = 0;
     }
