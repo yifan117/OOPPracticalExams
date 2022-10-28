@@ -13,8 +13,8 @@ class Employee {
         int get_payRate();
         float get_energyLevel();
 
-        void set_payRate();
-        void set_energyLevel();
+        void set_payRate(int payRate);
+        void set_energyLevel(float energyLevel);
 
         void takeABreak(int mins);
 
