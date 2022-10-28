@@ -48,23 +48,23 @@ void Casual::set_dayCount(int dayCount) {
 void Casual::work(int mins) {
     this->energyLevel -= (mins * 0.5);
 
+    this->hoursWorked[this->dayCount] += mins;
+
     if (this->energyLevel < 0) {
         this->energyLevel = 0;
-        cout << "too much" << endl;
-    } else {
-        this->hoursWorked[this->dayCount] += mins;
     }
 
 }
 
 float Casual::pay() {
     float total = 0;
+
     for (int i = 0; i < 7; i++) {
 
         if (i < 5) {
         total += this->hoursWorked[i];
         } else if (i >= 5) {
-            total += this->hoursWorked[i] * 2;
+            total += (this->hoursWorked[i] * 2);
         }
     }
 
@@ -74,5 +74,5 @@ float Casual::pay() {
         this->hoursWorked[i] = 0;
     }
 
-    return (payRate * total);
+    return (this->payRate * total);
 }
