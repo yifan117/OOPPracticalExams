@@ -15,6 +15,8 @@ class Casual : public Employee {
         int get_payRate();
         int get_dayCount();
 
+        void set_payRate(int payRate);
+
         void set_dayCount(int dayCount);
 
         void work(int mins);

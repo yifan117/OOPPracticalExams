@@ -17,6 +17,10 @@ Casual::Casual(int payRate) {
     }
 }
 
+void Casual::set_payRate(int payRate) {
+    this->payRate = payRate;
+}
+
 void Casual::endWorkDay() {
     this->dayCount++;
     this->hoursWorked[this->dayCount] = 0;

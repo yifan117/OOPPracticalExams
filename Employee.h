@@ -19,6 +19,6 @@ class Employee {
 
         void takeABreak(int mins);
 
-        void work(int mins);
-        float pay();
+        virtual void work(int mins);
+        virtual float pay();
 };

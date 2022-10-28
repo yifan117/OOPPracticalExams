@@ -19,10 +19,6 @@ void Employee::takeABreak(int mins) {
 }
 
 void Employee::work(int mins) {
-    this->energyLevel -= mins * 2;
-    if (this->energyLevel < 0) {
-        this->energyLevel = 0;
-    }
 }
 
 float Employee::pay() {
