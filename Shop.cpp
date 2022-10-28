@@ -5,6 +5,3 @@
 
 using namespace std;
 
-Shop::Shop() {
-
-}
