@@ -11,6 +11,8 @@ class Casual : public Employee {
 
         int hoursWorked[7];
         int dayCount;
+        int total;
+        float payA;
 
         int get_payRate();
         int get_dayCount();
