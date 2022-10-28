@@ -2,7 +2,7 @@
 #pragma once
 #include "Employee.h"
 
-class Manager {
+class Manager : public Employee {
     Manager();            
     Manager(int payRate);                // Create a Manager with a payRate
     
@@ -14,4 +14,8 @@ class Manager {
 
     void set_daysWorked(int daysWorked);
     void set_hoursWorked(float hoursWorked);
-}
+
+    void work(int mins);
+
+    float pay();
+};

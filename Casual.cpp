@@ -47,11 +47,11 @@ float Casual::pay() {
     float total = 0;
     for (int i = 0; i < 7; i++) {
 
-        if (i <= 5) {
+        if (i < 5) {
         total += this->hoursWorked[i];
-        } else if (i > 5) {
+        } else if (i >= 5) {
             total += this->hoursWorked[i] * 2;
         }
     }
-    return this->payRate * total;
+    return (this->payRate * total);
 }
