@@ -10,17 +10,16 @@ class Manager : public Employee {
     float hoursWorked;    // hours in day                 
     int daysWorked;   // number of 8 hour days
 
+    int get_payRate();
+    float get_energyLevel();
     int get_daysWorked();
     float get_hoursWorked();
 
-    void set_daysWorked(int daysWorked);
+    void set_payRate(int payRate);
+    void set_energyLevel(float energyLevel);
+    void set_daysWorked();
     void set_hoursWorked(float hoursWorked);
 
-    void set_payRate(int payRate);
-    float get_energyLevel();
-    void set_energyLevel(float energyLevel);
-    int get_payRate();
     void work(int mins);
-
     float pay();
 };
