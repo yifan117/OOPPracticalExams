@@ -4,7 +4,13 @@
 
 using namespace std;
 
-Casual::Casual(int payRate) : Employee(payRate) {
+Casual::Casual() {
+    for (int i = 0; i < 7; i++) {
+        this->hoursWorked[i] = 0;
+    }    this->dayCount = 0;
+}
+
+Casual::Casual(int payRate) {
     this->dayCount = 0;
     for (int i = 0; i < 7; i++) {
         this->hoursWorked[i] = 0;

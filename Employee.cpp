@@ -3,6 +3,9 @@
 
 using namespace std;
 
+Employee::Employee() {
+}
+
 Employee::Employee(int payRate) {
     this->payRate = payRate;
     this->energyLevel = 100;

@@ -5,6 +5,7 @@ using namespace std;
 
 class Employee {
     public:
+        Employee();
         Employee(int payRate);    // creates a Employee with payRate
 
         int payRate; // hourly payRate

@@ -6,6 +6,7 @@ using namespace std;
 
 class Casual : public Employee {
     public:
+        Casual();
         Casual(int payRate); // Create a Casual with a payRate
 
         int hoursWorked[7];
