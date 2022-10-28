@@ -6,52 +6,52 @@ using namespace std;
 
 Casual::Casual() {
     for (int i = 0; i < 7; i++) {
-        this->hoursWorked[i] = 0;
+        hoursWorked[i] = 0;
     }    
     
-    this->dayCount = 0;
+    dayCount = 0;
 
-    this->energyLevel = 100;
+    energyLevel = 100;
 }
 
 Casual::Casual(int payRate) {
-    this->dayCount = 0;
+    dayCount = 0;
     for (int i = 0; i < 7; i++) {
-        this->hoursWorked[i] = 0;
+        hoursWorked[i] = 0;
     }
     
-    this->energyLevel = 100;
+    energyLevel = 100;
 }
 
 void Casual::set_payRate(int payRate) {
-    this->payRate = payRate;
+    payRate = payRate;
 }
 
 void Casual::endWorkDay() {
-    this->dayCount++;
-    this->hoursWorked[this->dayCount] = 0;
-    this->energyLevel = 100;
+    dayCount++;
+    hoursWorked[dayCount] = 0;
+    energyLevel = 100;
 }
 
 int Casual::get_payRate() {
-    return this->payRate;
+    return payRate;
 }
 
 int Casual::get_dayCount() {
-    return this->dayCount;
+    return dayCount;
 }
 
 void Casual::set_dayCount(int dayCount) {
-    this->dayCount = dayCount;
+    dayCount = dayCount;
 }
 
 void Casual::work(int mins) {
-    this->energyLevel -= (mins * 0.5);
+    energyLevel -= (mins * 0.5);
 
-    this->hoursWorked[this->dayCount] += mins;
+    hoursWorked[dayCount] += mins;
 
-    if (this->energyLevel < 0) {
-        this->energyLevel = 0;
+    if (energyLevel < 0) {
+        energyLevel = 0;
     }
 
 }
@@ -62,17 +62,17 @@ float Casual::pay() {
     for (int i = 0; i < 7; i++) {
 
         if (i < 5) {
-        total += this->hoursWorked[i];
+        total += hoursWorked[i];
         } else if (i >= 5) {
-            total += (this->hoursWorked[i] * 2);
+            total += (hoursWorked[i] * 2);
         }
     }
 
-    this->dayCount = 0;
+    dayCount = 0;
 
     for (int i = 0; i < 7; i++) {
-        this->hoursWorked[i] = 0;
+        hoursWorked[i] = 0;
     }
 
-    return (this->payRate * total);
+    return (payRate * total);
 }
